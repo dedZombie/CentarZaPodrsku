@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Centar za podršku ženama</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./bootstrap-switch-master/dist/css/bootstrap3/bootstrap-switch.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/media-queries.css">
+</head>
+<body>
+    <div class="container">
+        <div class="panel panel-default col-md-5 col-md-offset-3 col-sm-5 col-sm-offset-3 col-xs-12 panel-pos">
+            <div class="panel-heading">
+                <h3 class="text-center">LOGIN</h3>
+            </div>
+            <div class="panel-body panel-stl">
+                <div class="form-group col-md-12 margin-bot-f">
+                    <label for="inputEmail">Email</label>
+                    <input type="email" class="form-control" id="inputEmail" required>
+                    <p id="demoEmail"></p>
+                </div>
+                <div class="form-group col-md-12 margin-bot-f">
+                    <label for="inputPass">Password</label>
+                    <input type="password" class="form-control" id="inputPass" required>
+                    <p id="demoPass"></p>
+                </div>
+                <a href="#" class="margin-l">Forgot password?</a>
+                <button type="button" class="btn btn-primary center-block btn-login" onclick="validate()">LOGIN</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+<script src="./bootstrap-switch-master/dist/js/bootstrap-switch.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+    /* setCustomValidity message*/
+    document.addEventListener("DOMContentLoaded", function () {
+        var elements = document.getElementsByTagName("INPUT");
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].oninvalid = function (e) {
+                e.target.setCustomValidity("");
+                if (!e.target.validity.valid) {
+                    e.target.setCustomValidity("Molimo popunite sva polja");
+                }
+            };
+            elements[i].oninput = function (e) {
+                e.target.setCustomValidity("");
+            };
+        }
+    })
+
+    function validate() {
+    var emailObj = document.getElementById("inputEmail");
+    var passObj = document.getElementById("inputPass");
+    if (!emailObj.checkValidity() && !passObj.checkValidity()) {
+        document.getElementById("demoEmail").innerHTML = emailObj.validationMessage;
+        document.getElementById("demoPass").innerHTML = passObj.validationMessage;
+        document.getElementById("inputEmail").style.borderColor = "red";
+        document.getElementById("inputEmail").style.borderWidth = "3px";
+        document.getElementById("inputPass").style.borderColor = "red";
+        document.getElementById("inputPass").style.borderWidth = "3px";
+    }
+}
+</script>
+</html>

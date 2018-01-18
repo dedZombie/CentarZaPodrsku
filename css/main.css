@@ -1,0 +1,96 @@
+body{
+    width: 100%;
+}
+ul.nav p{
+    margin: 0;
+}
+.wrapper{
+    width: 260px;
+    position: relative;
+}
+.sidebar{
+    height: 100vh;
+    width: 260px;
+    position: absolute;
+    background-image: url("../images/forest.jpeg");
+    background-size: cover;
+    opacity: 0.75;
+    /* background: grey; */
+    padding-bottom: 100px;
+    overflow: auto;
+}
+.sidebar a:hover{
+    text-decoration: none !important;
+}
+.sidebar-wrapper{
+    background: #fff;
+    opacity: 0.9;
+}
+.logo{
+    padding: 15px;
+}
+.main-content{
+    width: calc(100% - 260px);
+    min-height: 100%;
+    position: relative;
+    float: right;
+}
+ul.nav{
+    font-size: 1.67rem;
+}
+ul.nav > li.dropdown > ul > li{
+    list-style-type: none;
+    padding: 5px;
+}
+ul.nav > li.dropdown > ul > li > a{
+    text-decoration: none;
+}
+ul.mobile-nav > li{
+    list-style-type: none;
+    padding: 10px 0;
+}
+ul.mobile-nav > li > ul > li{
+    list-style-type: none;
+}
+ul.mobile-nav > li.dropdown > ul > li > a{
+    text-decoration: none;
+}
+.navbar-header{
+    margin-top: 10px;
+}
+.flt-right{
+    float: right;
+}
+.panel, .panel-default{
+    background-color: #f5f5f5;
+}
+.panel-heading{
+    padding: 25px 15px;
+    font-size: 3.3rem;
+    border: none;
+}
+.panel-body{
+    font-size: 1.6rem;
+}
+#contentText{
+    border-bottom: 1px solid grey;
+    padding: 10px;
+}
+
+/*LOGIN CSS*/
+.panel-pos{
+    margin-top: 15%;
+}
+.panel-stl{
+    padding: 25px 50px;
+}
+.margin-bot-f{
+    margin-bottom: 25px;
+}
+.margin-l{
+    margin-left: 15px;
+}
+.btn-login{
+    padding: 10px 50px;
+    margin-top: 25px;
+}
