@@ -35,6 +35,9 @@ ul.nav p{
     position: relative;
     float: right;
 }
+li.nav-item > ul.collapse > li{
+    padding-left: 20px;
+}
 ul.nav{
     font-size: 1.67rem;
 }
